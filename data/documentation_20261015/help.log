@@ -1,0 +1,7 @@
+make v1 | v2 | v3 | oai : correctness gate then benchmark
+make check-all         : golden, random, double, ops, pair differential, legacy checks
+make bench IMPL=v2 CC=clang CPU=2 ITERS=100000 REPS=7
+make bench IMPL=oai TRANSFORM=idft SIZE=1024 : extension smoke/timing, no golden claim
+make matrix            : repeat checks+timing for gcc/gcc-16/clang
+make historical        : show previous data locations (does not rerun historical binaries)
+See README.md and docs/ for numerical contracts and extension instructions.

@@ -1,0 +1,35 @@
+
+  [BUILD] test runner (gcc)
+
+== IDFT / DFT benchmark ==
+  Module      : v2
+  Contract    : AVX2-fixed-point-bit-exact
+  Mode        : golden
+  Transform   : IDFT | N=64 | scale=1
+  Compiler    : gcc: 15.2.0
+  Flags       : -O2 -std=gnu99 -march=rv64gcv
+  System      : Linux 6.18.3-7-spacemit-generic (riscv64)
+  CPU         : 2 (-1 = unpinned) | alignment=64 bytes
+  Input       : seed=1 | signal=sparse | mag=364
+  CPU kHz     : 2200000
+  RVV         : vlenb=32 bytes
+
+== Golden correctness ==
+  STATUS FN      SIGNAL      MAG SCALE   DIFF MAX ABS       RMSE    NRMSE %
+  PASS   idft64  sparse      364     1      0       0   0.000000   0.000000
+  PASS   idft64  random      364     1      0       0   0.000000   0.000000
+  PASS   idft64  random     2048     1      0       0   0.000000   0.000000
+  PASS   idft64  random     4095     1      0       0   0.000000   0.000000
+  PASS   idft64  impulse   32767     1      0       0   0.000000   0.000000
+  PASS   idft64  dc          500     1      0       0   0.000000   0.000000
+  PASS   idft64  tone        500     1      0       0   0.000000   0.000000
+  PASS   idft64  random     2048     0      0       0   0.000000   0.000000
+  PASS   idft64  impulse   32767     0      0       0   0.000000   0.000000
+  PASS   idft64  dc          500     0      0       0   0.000000   0.000000
+  PASS   idft64  random    32767     1      0       0   0.000000   0.000000
+  PASS   idft64  random    32767     0      0       0   0.000000   0.000000
+  PASS   idft64  dc         4096     1      0       0   0.000000   0.000000
+  PASS   idft64  tone       4096     1      0       0   0.000000   0.000000
+
+  [PASS] Checked: 14 | Pass: 14 | Fail: 0 | Report: 0 | Malformed: 0
+

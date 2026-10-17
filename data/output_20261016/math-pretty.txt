@@ -1,0 +1,21 @@
+
+== IDFT / DFT benchmark ==
+  Module      : v2
+  Contract    : AVX2-fixed-point-bit-exact
+  Mode        : math
+  Transform   : IDFT | N=64 | scale=1
+  Compiler    : gcc: 15.2.0
+  Flags       : -O2 -std=gnu99 -march=rv64gcv
+  System      : Linux 6.18.3-7-spacemit-generic (riscv64)
+  CPU         : 2 (-1 = unpinned) | alignment=64 bytes
+  Input       : seed=1 | signal=sparse | mag=364
+  CPU kHz     : 2200000
+  RVV         : vlenb=32 bytes
+
+== Independent double reference ==
+  Trials      : 8 | mag=364
+  EVM RMS     : 0.300543 % (required < 1 %)
+  Max abs     : 2.221416
+
+  [PASS] Mathematical accuracy gate
+

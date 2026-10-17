@@ -1,0 +1,2 @@
+unix_time,module,compiler,flags,transform,points,scale,cpu,seed,signal,mag,iters,reps,input_hash,min_ns,median_ns,max_ns
+1792057409,v4,"gcc: 15.2.0","-O2 -std=gnu99 -march=rv64gcv",idft,64,1,2,1,sparse,364,1000,3,1a0ba47ebf7cd64b,393.708000,393.750000,393.875000

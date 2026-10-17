@@ -1,0 +1,337 @@
+./build/40e82a92bade/bench-v1 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v1 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=14 pass=14 fail=0 report=0 malformed=0
+./build/40e82a92bade/bench-v1 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v1 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=618.183750
+round=2 ns_per_call=617.912500
+round=3 ns_per_call=617.629170
+round=4 ns_per_call=617.161250
+round=5 ns_per_call=617.399590
+round=6 ns_per_call=617.032080
+round=7 ns_per_call=617.620830
+RESULT module=v1 min_ns=617.032080 median_ns=617.620830 max_ns=618.183750 input_hash=1a0ba47ebf7cd64b
+./build/40e82a92bade/bench-v2 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=14 pass=14 fail=0 report=0 malformed=0
+./build/40e82a92bade/bench-v2 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=395.147500
+round=2 ns_per_call=394.713750
+round=3 ns_per_call=394.499580
+round=4 ns_per_call=394.015000
+round=5 ns_per_call=394.404580
+round=6 ns_per_call=394.460000
+round=7 ns_per_call=394.652920
+RESULT module=v2 min_ns=394.015000 median_ns=394.499580 max_ns=395.147500 input_hash=1a0ba47ebf7cd64b
+./build/40e82a92bade/bench-v3 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.154026
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=26 max_abs=2 rmse=0.475986 nrmse_pct=0.238774
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.032497
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=30 max_abs=1 rmse=0.484123 nrmse_pct=0.021719
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=6 max_abs=2 rmse=0.306186 nrmse_pct=0.061268
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=7 max_abs=1 rmse=0.233854 nrmse_pct=0.066144
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=100 max_abs=7 rmse=2.150581 nrmse_pct=0.021072
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=60 max_abs=2 rmse=1.145644 nrmse_pct=0.004945
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=27 max_abs=15 rmse=2.113942 nrmse_pct=0.052873
+REPORT golden fn=idft64 signal=random mag=32767 scale=1 different=67 max_abs=8125 rmse=1952.964145 nrmse_pct=61.261889
+REPORT golden fn=idft64 signal=random mag=32767 scale=0 different=81 max_abs=65007 rmse=15624.718426 nrmse_pct=61.260891
+REPORT golden fn=idft64 signal=dc mag=4096 scale=1 different=4 max_abs=1 rmse=0.176777 nrmse_pct=0.034535
+REPORT golden fn=idft64 signal=tone mag=4096 scale=1 different=14 max_abs=2206 rmse=335.780585 nrmse_pct=68.004281
+golden summary: checked=14 pass=10 fail=0 report=4 malformed=0
+./build/40e82a92bade/bench-v3 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=236.621660
+round=2 ns_per_call=236.698340
+round=3 ns_per_call=237.192080
+round=4 ns_per_call=236.772080
+round=5 ns_per_call=236.659170
+round=6 ns_per_call=236.760000
+round=7 ns_per_call=236.696660
+RESULT module=v3 min_ns=236.621660 median_ns=236.698340 max_ns=237.192080 input_hash=1a0ba47ebf7cd64b
+gcc-16 -O2 -std=gnu99 -march=rv64gcv -Iinclude -Ithird_party/simde-standard -Ithird_party/oai -Ithird_party/oai/openair1 -Ithird_party/oai/openair1/PHY/TOOLS -Ithird_party/oai/common/utils -Ithird_party/oai/common/utils/T -Ithird_party/oai/common/utils/LOG -Ithird_party/oai/openair2 -Ithird_party/oai/openair2/COMMON -Ithird_party/oai/targets -Ithird_party/oai/targets/COMMON -Ithird_party/oai/radio/COMMON -Ithird_party/oai/executables -Ithird_party/oai/nfapi/open-nFAPI/nfapi/public_inc -DBUILD_CC='"gcc-16: 16.0.1"' -DBUILD_FLAGS='"-O2 -std=gnu99 -march=rv64gcv"' -Wall -Wextra -MMD -MP -c tests/bench.c -o build/237b345cbd84/runner.o
+gcc-16 -O2 -std=gnu99 -march=rv64gcv -Iinclude -DKERNEL_SYMBOL=kernel_v1 -DMODULE_NAME='"v1"' -DMODULE_CONTRACT='"AVX2-fixed-point-bit-exact"' -DMODULE_APPROXIMATE=0 -DMODULE_POINTS=64 -DMODULE_INVERSE=1 -MMD -MP -c modules/rvv_adapter.c -o build/237b345cbd84/adapter-v1.o
+gcc-16 -O2 -std=gnu99 -march=rv64gcv -Imodules/v1 -Didft64_rvv=kernel_v1 -MMD -MP -c modules/v1/idft64_rvv.c -o build/237b345cbd84/kernel-v1.o
+gcc -O2 -std=gnu99 -march=rv64gcv -DNB_ANTENNAS_RX=1 -DNB_ANTENNAS_TX=1 -DMAX_NUM_CCs=1 -DOAI_DISABLE_WRITE_OUTPUT_MACRO -DSIMDE_NO_NATIVE -Iinclude -Ithird_party/simde-standard -Ithird_party/oai -Ithird_party/oai/openair1 -Ithird_party/oai/openair1/PHY/TOOLS -Ithird_party/oai/common/utils -Ithird_party/oai/common/utils/T -Ithird_party/oai/common/utils/LOG -Ithird_party/oai/openair2 -Ithird_party/oai/openair2/COMMON -Ithird_party/oai/targets -Ithird_party/oai/targets/COMMON -Ithird_party/oai/radio/COMMON -Ithird_party/oai/executables -Ithird_party/oai/nfapi/open-nFAPI/nfapi/public_inc -MMD -MP -c modules/oai_adapter.c -o build/237b345cbd84/reference.o
+gcc -march=rv64gcv build/237b345cbd84/runner.o build/237b345cbd84/adapter-v1.o build/237b345cbd84/kernel-v1.o build/237b345cbd84/reference.o build/base-48eade07eb0d/oai_dfts.o build/base-48eade07eb0d/time_meas.o build/base-48eade07eb0d/taus.o build/base-48eade07eb0d/stubs.o -lm -lpthread -o build/237b345cbd84/bench-v1
+./build/237b345cbd84/bench-v1 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v1 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc-16: 16.0.1 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=14 pass=14 fail=0 report=0 malformed=0
+./build/237b345cbd84/bench-v1 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v1 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc-16: 16.0.1 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=605.209580
+round=2 ns_per_call=604.614170
+round=3 ns_per_call=605.589580
+round=4 ns_per_call=604.789160
+round=5 ns_per_call=604.733340
+round=6 ns_per_call=604.420420
+round=7 ns_per_call=606.544590
+RESULT module=v1 min_ns=604.420420 median_ns=604.789160 max_ns=606.544590 input_hash=1a0ba47ebf7cd64b
+gcc-16 -O2 -std=gnu99 -march=rv64gcv -Iinclude -DKERNEL_SYMBOL=kernel_v2 -DMODULE_NAME='"v2"' -DMODULE_CONTRACT='"AVX2-fixed-point-bit-exact"' -DMODULE_APPROXIMATE=0 -DMODULE_POINTS=64 -DMODULE_INVERSE=1 -MMD -MP -c modules/rvv_adapter.c -o build/237b345cbd84/adapter-v2.o
+gcc-16 -O2 -std=gnu99 -march=rv64gcv -Imodules/v2 -Didft64_rvv=kernel_v2 -MMD -MP -c modules/v2/idft64_rvv.c -o build/237b345cbd84/kernel-v2.o
+gcc -march=rv64gcv build/237b345cbd84/runner.o build/237b345cbd84/adapter-v2.o build/237b345cbd84/kernel-v2.o build/237b345cbd84/reference.o build/base-48eade07eb0d/oai_dfts.o build/base-48eade07eb0d/time_meas.o build/base-48eade07eb0d/taus.o build/base-48eade07eb0d/stubs.o -lm -lpthread -o build/237b345cbd84/bench-v2
+./build/237b345cbd84/bench-v2 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc-16: 16.0.1 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=14 pass=14 fail=0 report=0 malformed=0
+./build/237b345cbd84/bench-v2 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc-16: 16.0.1 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=382.265840
+round=2 ns_per_call=381.727910
+round=3 ns_per_call=381.689580
+round=4 ns_per_call=381.798750
+round=5 ns_per_call=381.587920
+round=6 ns_per_call=381.342090
+round=7 ns_per_call=381.659590
+RESULT module=v2 min_ns=381.342090 median_ns=381.689580 max_ns=382.265840 input_hash=1a0ba47ebf7cd64b
+gcc-16 -O2 -std=gnu99 -march=rv64gcv -Iinclude -DKERNEL_SYMBOL=kernel_v3 -DMODULE_NAME='"v3"' -DMODULE_CONTRACT='"native-DIF-tolerant"' -DMODULE_APPROXIMATE=1 -DMODULE_POINTS=64 -DMODULE_INVERSE=1 -MMD -MP -c modules/rvv_adapter.c -o build/237b345cbd84/adapter-v3.o
+gcc-16 -O2 -std=gnu99 -march=rv64gcv -Imodules/v3 -Didft64_rvv=kernel_v3 -MMD -MP -c modules/v3/idft64_rvv_native.c -o build/237b345cbd84/kernel-v3.o
+gcc -march=rv64gcv build/237b345cbd84/runner.o build/237b345cbd84/adapter-v3.o build/237b345cbd84/kernel-v3.o build/237b345cbd84/reference.o build/base-48eade07eb0d/oai_dfts.o build/base-48eade07eb0d/time_meas.o build/base-48eade07eb0d/taus.o build/base-48eade07eb0d/stubs.o -lm -lpthread -o build/237b345cbd84/bench-v3
+./build/237b345cbd84/bench-v3 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc-16: 16.0.1 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.154026
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=26 max_abs=2 rmse=0.475986 nrmse_pct=0.238774
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.032497
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=30 max_abs=1 rmse=0.484123 nrmse_pct=0.021719
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=6 max_abs=2 rmse=0.306186 nrmse_pct=0.061268
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=7 max_abs=1 rmse=0.233854 nrmse_pct=0.066144
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=100 max_abs=7 rmse=2.150581 nrmse_pct=0.021072
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=60 max_abs=2 rmse=1.145644 nrmse_pct=0.004945
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=27 max_abs=15 rmse=2.113942 nrmse_pct=0.052873
+REPORT golden fn=idft64 signal=random mag=32767 scale=1 different=67 max_abs=8125 rmse=1952.964145 nrmse_pct=61.261889
+REPORT golden fn=idft64 signal=random mag=32767 scale=0 different=81 max_abs=65007 rmse=15624.718426 nrmse_pct=61.260891
+REPORT golden fn=idft64 signal=dc mag=4096 scale=1 different=4 max_abs=1 rmse=0.176777 nrmse_pct=0.034535
+REPORT golden fn=idft64 signal=tone mag=4096 scale=1 different=14 max_abs=2206 rmse=335.780585 nrmse_pct=68.004281
+golden summary: checked=14 pass=10 fail=0 report=4 malformed=0
+./build/237b345cbd84/bench-v3 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc-16: 16.0.1 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=236.584590
+round=2 ns_per_call=236.595410
+round=3 ns_per_call=236.487090
+round=4 ns_per_call=236.406660
+round=5 ns_per_call=236.439590
+round=6 ns_per_call=236.605830
+round=7 ns_per_call=236.958750
+RESULT module=v3 min_ns=236.406660 median_ns=236.584590 max_ns=236.958750 input_hash=1a0ba47ebf7cd64b
+clang -O2 -std=gnu99 -march=rv64gcv -Iinclude -Ithird_party/simde-standard -Ithird_party/oai -Ithird_party/oai/openair1 -Ithird_party/oai/openair1/PHY/TOOLS -Ithird_party/oai/common/utils -Ithird_party/oai/common/utils/T -Ithird_party/oai/common/utils/LOG -Ithird_party/oai/openair2 -Ithird_party/oai/openair2/COMMON -Ithird_party/oai/targets -Ithird_party/oai/targets/COMMON -Ithird_party/oai/radio/COMMON -Ithird_party/oai/executables -Ithird_party/oai/nfapi/open-nFAPI/nfapi/public_inc -DBUILD_CC='"clang: 21.1.8"' -DBUILD_FLAGS='"-O2 -std=gnu99 -march=rv64gcv"' -Wall -Wextra -MMD -MP -c tests/bench.c -o build/07c24498bfed/runner.o
+clang -O2 -std=gnu99 -march=rv64gcv -Iinclude -DKERNEL_SYMBOL=kernel_v1 -DMODULE_NAME='"v1"' -DMODULE_CONTRACT='"AVX2-fixed-point-bit-exact"' -DMODULE_APPROXIMATE=0 -DMODULE_POINTS=64 -DMODULE_INVERSE=1 -MMD -MP -c modules/rvv_adapter.c -o build/07c24498bfed/adapter-v1.o
+clang -O2 -std=gnu99 -march=rv64gcv -Imodules/v1 -Didft64_rvv=kernel_v1 -MMD -MP -c modules/v1/idft64_rvv.c -o build/07c24498bfed/kernel-v1.o
+gcc -O2 -std=gnu99 -march=rv64gcv -DNB_ANTENNAS_RX=1 -DNB_ANTENNAS_TX=1 -DMAX_NUM_CCs=1 -DOAI_DISABLE_WRITE_OUTPUT_MACRO -DSIMDE_NO_NATIVE -Iinclude -Ithird_party/simde-standard -Ithird_party/oai -Ithird_party/oai/openair1 -Ithird_party/oai/openair1/PHY/TOOLS -Ithird_party/oai/common/utils -Ithird_party/oai/common/utils/T -Ithird_party/oai/common/utils/LOG -Ithird_party/oai/openair2 -Ithird_party/oai/openair2/COMMON -Ithird_party/oai/targets -Ithird_party/oai/targets/COMMON -Ithird_party/oai/radio/COMMON -Ithird_party/oai/executables -Ithird_party/oai/nfapi/open-nFAPI/nfapi/public_inc -MMD -MP -c modules/oai_adapter.c -o build/07c24498bfed/reference.o
+gcc -march=rv64gcv build/07c24498bfed/runner.o build/07c24498bfed/adapter-v1.o build/07c24498bfed/kernel-v1.o build/07c24498bfed/reference.o build/base-48eade07eb0d/oai_dfts.o build/base-48eade07eb0d/time_meas.o build/base-48eade07eb0d/taus.o build/base-48eade07eb0d/stubs.o -lm -lpthread -o build/07c24498bfed/bench-v1
+./build/07c24498bfed/bench-v1 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v1 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=clang: 21.1.8 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=14 pass=14 fail=0 report=0 malformed=0
+./build/07c24498bfed/bench-v1 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v1 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=clang: 21.1.8 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=586.476670
+round=2 ns_per_call=584.172500
+round=3 ns_per_call=586.031660
+round=4 ns_per_call=583.777080
+round=5 ns_per_call=583.814160
+round=6 ns_per_call=583.780420
+round=7 ns_per_call=584.315410
+RESULT module=v1 min_ns=583.777080 median_ns=584.172500 max_ns=586.476670 input_hash=1a0ba47ebf7cd64b
+clang -O2 -std=gnu99 -march=rv64gcv -Iinclude -DKERNEL_SYMBOL=kernel_v2 -DMODULE_NAME='"v2"' -DMODULE_CONTRACT='"AVX2-fixed-point-bit-exact"' -DMODULE_APPROXIMATE=0 -DMODULE_POINTS=64 -DMODULE_INVERSE=1 -MMD -MP -c modules/rvv_adapter.c -o build/07c24498bfed/adapter-v2.o
+clang -O2 -std=gnu99 -march=rv64gcv -Imodules/v2 -Didft64_rvv=kernel_v2 -MMD -MP -c modules/v2/idft64_rvv.c -o build/07c24498bfed/kernel-v2.o
+gcc -march=rv64gcv build/07c24498bfed/runner.o build/07c24498bfed/adapter-v2.o build/07c24498bfed/kernel-v2.o build/07c24498bfed/reference.o build/base-48eade07eb0d/oai_dfts.o build/base-48eade07eb0d/time_meas.o build/base-48eade07eb0d/taus.o build/base-48eade07eb0d/stubs.o -lm -lpthread -o build/07c24498bfed/bench-v2
+./build/07c24498bfed/bench-v2 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=clang: 21.1.8 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=14 pass=14 fail=0 report=0 malformed=0
+./build/07c24498bfed/bench-v2 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=clang: 21.1.8 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=349.272910
+round=2 ns_per_call=349.421250
+round=3 ns_per_call=348.585840
+round=4 ns_per_call=349.492080
+round=5 ns_per_call=348.810830
+round=6 ns_per_call=349.377090
+round=7 ns_per_call=348.835840
+RESULT module=v2 min_ns=348.585840 median_ns=349.272910 max_ns=349.492080 input_hash=1a0ba47ebf7cd64b
+clang -O2 -std=gnu99 -march=rv64gcv -Iinclude -DKERNEL_SYMBOL=kernel_v3 -DMODULE_NAME='"v3"' -DMODULE_CONTRACT='"native-DIF-tolerant"' -DMODULE_APPROXIMATE=1 -DMODULE_POINTS=64 -DMODULE_INVERSE=1 -MMD -MP -c modules/rvv_adapter.c -o build/07c24498bfed/adapter-v3.o
+clang -O2 -std=gnu99 -march=rv64gcv -Imodules/v3 -Didft64_rvv=kernel_v3 -MMD -MP -c modules/v3/idft64_rvv_native.c -o build/07c24498bfed/kernel-v3.o
+gcc -march=rv64gcv build/07c24498bfed/runner.o build/07c24498bfed/adapter-v3.o build/07c24498bfed/kernel-v3.o build/07c24498bfed/reference.o build/base-48eade07eb0d/oai_dfts.o build/base-48eade07eb0d/time_meas.o build/base-48eade07eb0d/taus.o build/base-48eade07eb0d/stubs.o -lm -lpthread -o build/07c24498bfed/bench-v3
+./build/07c24498bfed/bench-v3 --mode golden --transform idft --size 64 --cpu 2 --scale 1 --seed 1
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=clang: 21.1.8 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.154026
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=26 max_abs=2 rmse=0.475986 nrmse_pct=0.238774
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.032497
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=30 max_abs=1 rmse=0.484123 nrmse_pct=0.021719
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=6 max_abs=2 rmse=0.306186 nrmse_pct=0.061268
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=7 max_abs=1 rmse=0.233854 nrmse_pct=0.066144
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=100 max_abs=7 rmse=2.150581 nrmse_pct=0.021072
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=60 max_abs=2 rmse=1.145644 nrmse_pct=0.004945
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=27 max_abs=15 rmse=2.113942 nrmse_pct=0.052873
+REPORT golden fn=idft64 signal=random mag=32767 scale=1 different=67 max_abs=8125 rmse=1952.964145 nrmse_pct=61.261889
+REPORT golden fn=idft64 signal=random mag=32767 scale=0 different=81 max_abs=65007 rmse=15624.718426 nrmse_pct=61.260891
+REPORT golden fn=idft64 signal=dc mag=4096 scale=1 different=4 max_abs=1 rmse=0.176777 nrmse_pct=0.034535
+REPORT golden fn=idft64 signal=tone mag=4096 scale=1 different=14 max_abs=2206 rmse=335.780585 nrmse_pct=68.004281
+golden summary: checked=14 pass=10 fail=0 report=4 malformed=0
+./build/07c24498bfed/bench-v3 --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 100000 --reps 7 --signal sparse --mag 364 --csv data/current/results.csv
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=clang: 21.1.8 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=247.460000
+round=2 ns_per_call=247.050830
+round=3 ns_per_call=247.284170
+round=4 ns_per_call=249.025000
+round=5 ns_per_call=247.047090
+round=6 ns_per_call=247.321670
+round=7 ns_per_call=247.248330
+RESULT module=v3 min_ns=247.047090 median_ns=247.284170 max_ns=249.025000 input_hash=1a0ba47ebf7cd64b

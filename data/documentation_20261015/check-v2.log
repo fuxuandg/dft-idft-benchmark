@@ -1,0 +1,20 @@
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=14 pass=14 fail=0 report=0 malformed=0

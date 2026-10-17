@@ -1,0 +1,5 @@
+* d33ee09 (HEAD -> rvv-v3-native) perf(rvv): add native radix-4 idft64 experiment
+* 8df83e6 (rvv-v2) perf(rvv): second-round hand-written optimization (current best)
+* 0a061e4 (rvv-v1) build: allow the RVV object to be compiled by clang (mixed build)
+* e6afef2 feat(rvv): add hand-written RVV idft64 (first version)
+* 8a2333e (main) chore: K3-only baseline (harness + referee, no RVV implementation)

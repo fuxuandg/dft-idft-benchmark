@@ -1,0 +1,1 @@
+PASS: raw golden metrics identical before/after; redirected pretty has no ANSI; forced color has ANSI; invalid presentation options return 2; numerical negative checks passed.

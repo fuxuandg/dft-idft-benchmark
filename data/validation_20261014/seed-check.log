@@ -1,0 +1,14 @@
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=393.833000
+RESULT module=v2 min_ns=393.833000 median_ns=393.833000 max_ns=393.833000 input_hash=1a0ba47ebf7cd64b
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=2 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=417.459000
+RESULT module=v2 min_ns=417.459000 median_ns=417.459000 max_ns=417.459000 input_hash=a8f9e8e42f5d454b

@@ -1,0 +1,6 @@
+PASS negative --mode golden --golden /dev/null
+PASS negative --mode golden --golden /nonexistent/idft-golden
+PASS negative --size 1024
+PASS negative --transform dft
+PASS negative --iters 0
+PASS negative --seed 0

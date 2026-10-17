@@ -1,0 +1,20 @@
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=idft64 signal=sparse mag=364 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.154026
+PASS golden fn=idft64 signal=random mag=364 scale=1 different=26 max_abs=2 rmse=0.475986 nrmse_pct=0.238774
+PASS golden fn=idft64 signal=random mag=2048 scale=1 different=22 max_abs=1 rmse=0.414578 nrmse_pct=0.032497
+PASS golden fn=idft64 signal=random mag=4095 scale=1 different=30 max_abs=1 rmse=0.484123 nrmse_pct=0.021719
+PASS golden fn=idft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=idft64 signal=dc mag=500 scale=1 different=6 max_abs=2 rmse=0.306186 nrmse_pct=0.061268
+PASS golden fn=idft64 signal=tone mag=500 scale=1 different=7 max_abs=1 rmse=0.233854 nrmse_pct=0.066144
+PASS golden fn=idft64 signal=random mag=2048 scale=0 different=100 max_abs=7 rmse=2.150581 nrmse_pct=0.021072
+PASS golden fn=idft64 signal=impulse mag=32767 scale=0 different=60 max_abs=2 rmse=1.145644 nrmse_pct=0.004945
+PASS golden fn=idft64 signal=dc mag=500 scale=0 different=27 max_abs=15 rmse=2.113942 nrmse_pct=0.052873
+REPORT golden fn=idft64 signal=random mag=32767 scale=1 different=67 max_abs=8125 rmse=1952.964145 nrmse_pct=61.261889
+REPORT golden fn=idft64 signal=random mag=32767 scale=0 different=81 max_abs=65007 rmse=15624.718426 nrmse_pct=61.260891
+REPORT golden fn=idft64 signal=dc mag=4096 scale=1 different=4 max_abs=1 rmse=0.176777 nrmse_pct=0.034535
+REPORT golden fn=idft64 signal=tone mag=4096 scale=1 different=14 max_abs=2206 rmse=335.780585 nrmse_pct=68.004281
+golden summary: checked=14 pass=10 fail=0 report=4 malformed=0

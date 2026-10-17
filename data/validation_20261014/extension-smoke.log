@@ -1,0 +1,60 @@
+./build/40e82a92bade/bench-oai --mode bench --transform idft --size 512 --cpu 2 --scale 1 --seed 1 --iters 100 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=512 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=127222.920000
+round=2 ns_per_call=127307.080000
+round=3 ns_per_call=127123.330000
+RESULT module=oai-standard-simde min_ns=127123.330000 median_ns=127222.920000 max_ns=127307.080000 input_hash=c3d77708d1c4705b
+./build/40e82a92bade/bench-oai --mode bench --transform idft --size 1024 --cpu 2 --scale 1 --seed 1 --iters 100 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=1024 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=243242.500000
+round=2 ns_per_call=243358.750000
+round=3 ns_per_call=243422.500000
+RESULT module=oai-standard-simde min_ns=243242.500000 median_ns=243358.750000 max_ns=243422.500000 input_hash=4ae75f194bdc649b
+./build/40e82a92bade/bench-oai --mode bench --transform idft --size 2048 --cpu 2 --scale 1 --seed 1 --iters 100 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=2048 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=632402.090000
+round=2 ns_per_call=631417.500000
+round=3 ns_per_call=630974.170000
+RESULT module=oai-standard-simde min_ns=630974.170000 median_ns=631417.500000 max_ns=632402.090000 input_hash=d036d8132a0e84b3
+./build/40e82a92bade/bench-oai --mode bench --transform dft --size 512 --cpu 2 --scale 1 --seed 1 --iters 100 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=dft points=512 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=129899.170000
+round=2 ns_per_call=130041.660000
+round=3 ns_per_call=129801.250000
+RESULT module=oai-standard-simde min_ns=129801.250000 median_ns=129899.170000 max_ns=130041.660000 input_hash=c3d77708d1c4705b
+./build/40e82a92bade/bench-oai --mode bench --transform dft --size 1024 --cpu 2 --scale 1 --seed 1 --iters 100 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=dft points=1024 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=249239.170000
+round=2 ns_per_call=250162.500000
+round=3 ns_per_call=249102.090000
+RESULT module=oai-standard-simde min_ns=249102.090000 median_ns=249239.170000 max_ns=250162.500000 input_hash=4ae75f194bdc649b
+./build/40e82a92bade/bench-oai --mode bench --transform dft --size 2048 --cpu 2 --scale 1 --seed 1 --iters 100 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=dft points=2048 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=648444.170000
+round=2 ns_per_call=650291.250000
+round=3 ns_per_call=648713.330000
+RESULT module=oai-standard-simde min_ns=648444.170000 median_ns=648713.330000 max_ns=650291.250000 input_hash=d036d8132a0e84b3

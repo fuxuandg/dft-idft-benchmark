@@ -1,0 +1,10 @@
+Release documentation policy (2026-10-15):
+docs/ contains only user-guide.md and technical-reference.md.
+README.md is navigation. Third-party notices/licenses and source provenance remain.
+
+15 historical documents and their original title index are outside the release:
+Archive: idft_benchmark_history_docs_20261015.zip
+SHA256: 1d53116fb92fc80d3c105b03addc54f6955d4186a14c5c9e4fff31735e010832
+Local delivery directory: E:\study\研一\十月\10月20日组会\归档_旧版说明_20261014
+This archive is optional source-history material, not a runtime or documentation dependency.
+Current algorithm explanations are consolidated in technical-reference.md section 14.

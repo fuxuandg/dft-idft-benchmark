@@ -1,0 +1,29 @@
+./build/40e82a92bade/bench-oai --mode golden --transform dft --size 64 --cpu 2 --scale 1 --seed 1
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=dft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS golden fn=dft64 signal=sparse mag=364 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=random mag=2048 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=random mag=4095 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=impulse mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=dc mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=tone mag=500 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=random mag=2048 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=impulse mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=random mag=32767 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=random mag=32767 scale=0 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=dc mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+PASS golden fn=dft64 signal=tone mag=4096 scale=1 different=0 max_abs=0 rmse=0.000000 nrmse_pct=0.000000
+golden summary: checked=12 pass=12 fail=0 report=0 malformed=0
+./build/40e82a92bade/bench-oai --mode bench --transform dft --size 64 --cpu 2 --scale 1 --seed 1 --iters 10000 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=dft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=7848.312500
+round=2 ns_per_call=7836.058400
+round=3 ns_per_call=7839.470800
+RESULT module=oai-standard-simde min_ns=7836.058400 median_ns=7839.470800 max_ns=7848.312500 input_hash=1a0ba47ebf7cd64b

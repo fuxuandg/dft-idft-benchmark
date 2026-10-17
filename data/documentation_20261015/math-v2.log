@@ -1,0 +1,6 @@
+module=v2 contract=AVX2-fixed-point-bit-exact
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS independent-double trials=8 mag=364 evm_rms_pct=0.300543 max_abs=2.221416 criterion=1_percent

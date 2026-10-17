@@ -1,0 +1,5 @@
++ course/demapper-rvv 6578a7b (/home/ubuntu/sionna-rk-demapper-course) Record independent audit of saved scalar and RVV outputs
+* k3-rv64-cpu-only    0abdce3 Release v1.3.2
+  main                0abdce3 [origin/main] Release v1.3.2
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main 0abdce3 Release v1.3.2

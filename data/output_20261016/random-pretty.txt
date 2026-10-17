@@ -1,0 +1,23 @@
+
+== IDFT / DFT benchmark ==
+  Module      : v2
+  Contract    : AVX2-fixed-point-bit-exact
+  Mode        : random
+  Transform   : IDFT | N=64 | scale=1
+  Compiler    : gcc: 15.2.0
+  Flags       : -O2 -std=gnu99 -march=rv64gcv
+  System      : Linux 6.18.3-7-spacemit-generic (riscv64)
+  CPU         : 2 (-1 = unpinned) | alignment=64 bytes
+  Input       : seed=1 | signal=sparse | mag=364
+  CPU kHz     : 2200000
+  RVV         : vlenb=32 bytes
+
+== Random differential correctness ==
+  STATUS    MAG    CASES      LANES       DIFF MAX ABS       RMSE    NRMSE %
+  PASS      364        4        512          0       0   0.000000   0.000000
+  PASS     2048        4        512          0       0   0.000000   0.000000
+  PASS     4095        4        512          0       0   0.000000   0.000000
+  PASS    32767        4        512          0       0   0.000000   0.000000
+
+  [PASS] Random differential gate (REPORT rows excluded).
+

@@ -1,0 +1,35 @@
+
+== IDFT / DFT benchmark ==
+  Module      : v3
+  Contract    : native-DIF-tolerant
+  Mode        : golden
+  Transform   : IDFT | N=64 | scale=1
+  Compiler    : gcc: 15.2.0
+  Flags       : -O2 -std=gnu99 -march=rv64gcv
+  System      : Linux 6.18.3-7-spacemit-generic (riscv64)
+  CPU         : 2 (-1 = unpinned) | alignment=64 bytes
+  Input       : seed=1 | signal=sparse | mag=364
+  CPU kHz     : 2200000
+  RVV         : vlenb=32 bytes
+
+== Golden correctness ==
+  STATUS FN      SIGNAL      MAG SCALE   DIFF MAX ABS       RMSE    NRMSE %
+  PASS   idft64  sparse      364     1     22       1   0.414578   0.154026
+  PASS   idft64  random      364     1     26       2   0.475986   0.238774
+  PASS   idft64  random     2048     1     22       1   0.414578   0.032497
+  PASS   idft64  random     4095     1     30       1   0.484123   0.021719
+  PASS   idft64  impulse   32767     1      0       0   0.000000   0.000000
+  PASS   idft64  dc          500     1      6       2   0.306186   0.061268
+  PASS   idft64  tone        500     1      7       1   0.233854   0.066144
+  PASS   idft64  random     2048     0    100       7   2.150581   0.021072
+  PASS   idft64  impulse   32767     0     60       2   1.145644   0.004945
+  PASS   idft64  dc          500     0     27      15   2.113942   0.052873
+  REPORT idft64  random    32767     1     67    8125 1952.964145  61.261889
+  REPORT idft64  random    32767     0     81   65007 15624.718426  61.260891
+  REPORT idft64  dc         4096     1      4       1   0.176777   0.034535
+  REPORT idft64  tone       4096     1     14    2206 335.780585  68.004281
+
+  [PASS] Checked: 14 | Pass: 10 | Fail: 0 | Report: 4 | Malformed: 0
+
+  REPORT = stress input, reported only; not a correctness pass.
+

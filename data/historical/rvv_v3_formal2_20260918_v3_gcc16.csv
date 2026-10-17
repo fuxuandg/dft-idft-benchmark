@@ -1,0 +1,4 @@
+transform,mode,signal,mag,iters,reps,cpu,timer,ticks_per_us,min_ticks,median_ticks,max_ticks,median_us,median_ns,spread_pct
+idft64,batch,sparse,364,100000,7,2,rdtime,24.0007,11.57,11.64,11.66,0.4848,484.82,0.79
+idft64,batch,sparse,364,100000,7,2,rdtime,24.0006,10.39,11.34,11.35,0.4724,472.38,8.48
+idft64,batch,sparse,364,100000,7,2,rdtime,24.0005,11.39,11.73,12.68,0.4886,488.64,11.01

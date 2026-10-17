@@ -1,0 +1,5 @@
+config,idft64_us,dft64_us,instructions_per_call,core_cycles,IPC,speedup_vs_scalar
+gcc15_scalar,7.762,7.901,30197,17077,1.77,1.00
+gcc16_nopatch,7.911,7.986,~30197,~17400,~1.74,0.98
+gcc16_patch,3.103,3.191,5517,6827,0.81,2.50
+clang_patch_fastpath_blocked,21.573,21.542,~30197,~47461,~0.64,0.36

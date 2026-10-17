@@ -1,0 +1,9 @@
+module=v3 contract=native-DIF-tolerant
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+PASS random mag=364 cases=16 lanes=2048 different=446 max_abs=2 rmse=0.468229 nrmse_pct=0.225681
+PASS random mag=2048 cases=16 lanes=2048 different=436 max_abs=2 rmse=0.466139 nrmse_pct=0.039782
+REPORT random mag=4095 cases=16 lanes=2048 different=395 max_abs=2 rmse=0.440835 nrmse_pct=0.019935
+REPORT random mag=32767 cases=16 lanes=2048 different=1063 max_abs=8191 rmse=1512.881619 nrmse_pct=49.110678

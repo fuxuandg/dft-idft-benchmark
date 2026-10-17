@@ -1,0 +1,4 @@
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+gcc-16 (Ubuntu 16-20260322-1ubuntu1) 16.0.1 20260322 (experimental) [trunk r16-8246-g569ace1fa50]
+Ubuntu clang version 21.1.8 (6ubuntu1)
+Linux ubuntu 6.18.3-7-spacemit-generic #0 SMP PREEMPT_DYNAMIC Sun Jul 26 01:05:51 UTC 2026 riscv64 GNU/Linux

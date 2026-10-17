@@ -1,0 +1,10 @@
+./build/40e82a92bade/bench-oai --mode bench --transform idft --size 64 --cpu 2 --scale 1 --seed 1 --iters 10000 --reps 3 --signal sparse --mag 364 --csv data/current/results.csv
+module=oai-standard-simde contract=OAI fixed-point baseline; unmodified SIMDe 0.8.4; SIMDE_NO_NATIVE
+system=Linux 6.18.3-7-spacemit-generic arch=riscv64 compiler=gcc: 15.2.0 flags=-O2 -std=gnu99 -march=rv64gcv
+transform=idft points=64 scale=1 cpu=2 alignment=64 seed=1 signal=sparse mag=364
+cpu_frequency_khz=2200000
+vlenb=32
+round=1 ns_per_call=7796.762500
+round=2 ns_per_call=7782.891700
+round=3 ns_per_call=7782.925000
+RESULT module=oai-standard-simde min_ns=7782.891700 median_ns=7782.925000 max_ns=7796.762500 input_hash=1a0ba47ebf7cd64b

@@ -1,0 +1,12 @@
+Git import: 2026-10-17
+Source archive: idft_benchmark_release_20261017_quickstart.zip
+Source archive SHA256: 0c5617d6e215726456cdbd316762f1a2b96c1598d9920d5efcfe439a8d9db19e
+
+The upstream .git metadata nested under third_party/simde-standard/simde/
+is omitted from this repository. All dependency source files and license
+notices are retained as ordinary tracked files, not as a Git submodule.
+Algorithm and test sources are unchanged from the source archive.
+
+Added .gitignore for build/ and data/current/ and .gitattributes to preserve
+file bytes for SHA256SUMS. tools/package.ps1 excludes Git metadata at any
+depth. SHA256SUMS is regenerated for this source snapshot.

@@ -1,0 +1,12 @@
+Original archive: E:\study\研一\九月\9月15日组会\FFT优化尝试.zip
+Direct ZIP entry SHA256 evidence (2026-10-14):
+4c352739e67104c678029c7ae2573405fd73ae879de77737be379f68dec43cae  src/rvv/rvv_ops_test.c (7619 bytes)
+fa36fbec54306bc73fa106aded0e65074421cc9b0287d4a3dcbb811651e1c714  src/rvv/rvv_ops.h (11382 bytes)
+ac089012637e1ce2e63201b163733855e0d408bf77c2369a3e66772a3141454d  src/rvv/rvv_idft64.c (8688 bytes)
+7712275d033456b64b4d2db4d7fb748decf338ac83aae842b3b5865e8b6179f7  golden/x86_golden.txt (28524 bytes)
+be0ad744449211ef85dd6f95fe1434e9f952d95523ec3a5952f6fff1f6258064  golden/x86_idft64_scale1_seed1.bin (512 bytes)
+
+Standalone idft64_rvv.c equals rvv-v1 tracked source:
+f31f2f9891409f2db3098377eda0eddd57aeb4309a159ff65ea014b9fde10c27
+Standalone round2 idft64_rvv.c equals rvv-v2 tracked source:
+703a3693fc117f361d3e13e61210486352e7dbe12ccf0d175734fa3ccc732c76
